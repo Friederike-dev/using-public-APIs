@@ -450,8 +450,8 @@ header .align-items-center {
 .caro .container {
   width: 80%;
   box-sizing: border-box;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .caro h1 {
@@ -1255,7 +1255,16 @@ font-size: 1.1rem;
 .city-input-form button {
   margin-left: 0;
 }
+
+.caro .carousel {
+  width: 90%;
 }
+
+}
+
+
+
+
 
 .first-cell {
   width: 100%;
