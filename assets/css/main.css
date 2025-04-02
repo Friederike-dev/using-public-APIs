@@ -450,9 +450,15 @@ header .align-items-center {
 .caro .container {
   width: 80%;
   box-sizing: border-box;
+  padding-left: 36px;
+  padding-right: 36px;
 }
 
+.caro h1 {
+  margin-bottom: 20px;
+}
 .caro h2 {
+  /* margin-top: 16px; */
   margin-bottom: 30px;
   font-size: 48px;
   font-weight: 700;
