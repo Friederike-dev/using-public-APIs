@@ -1,0 +1,14 @@
+<%- include("header.ejs") %>
+
+<section class="caro section dark-bg">     
+    <div class="container margin-top-100-z-index-1">
+        <h1>Random Wikipedia Article</h1>
+        <h2><%= title %></h2>
+        <p><%= description %></p> <!-- Kurzbeschreibung anzeigen -->
+        <p>
+          <a href="<%= url %>" target="_blank">Read the full article on Wikipedia</a>
+        </p>
+      </div>
+</section>
+
+<%- include("footer.ejs") %>

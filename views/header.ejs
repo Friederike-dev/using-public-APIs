@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>APIs on a Website</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="weather stocks wikipedia sports" />
+    <link href="/img/favicon-teal2.png" rel="icon" />
+
+    <!-- Fonts and Stylesheets-->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fontsource/syncopate/index.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fontsource/raleway/index.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carlito&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"
+    />
+
+    <link href="/css/main.css" rel="stylesheet" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- for the Map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  </head>
+
+  <body
+    class="<%= currentPath === '/food' || currentPath === '/stock' || currentPath === '/weather' || currentPath === '/wikipedia' ? 'bg-simple' : '' %>"
+  >
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+    >
+      <a href="/" class="d-flex align-items-center">
+        <h1>t i m e o u t</h1>
+      </a>
+
+      <nav id="navigation" class="navigation">
+        <ul>
+          <li class="dropdown">
+            <a href="#"
+              ><span>Services</span>
+              <i class="bi bi-chevron-down toggle-btn-dropdown"></i
+            ></a>
+            <ul>
+              <li><a href="/weather">Weather Forecast</a></li>
+              <li><a href="/food">Recipe</a></li>
+              <li><a href="/wikipedia">Wikipedia</a></li>
+              <li class="dropdown">
+                <a href="/stock"
+                  ><span>Stock Market</span>
+                  <i class="bi bi-chevron-down toggle-btn-dropdown"></i
+                ></a>
+                <ul>
+                  <li><a href="/stock">Search a stock</a></li>
+                  <li>
+                    <form action="/get-stock" method="POST" style="display: inline;">
+                      <input type="hidden" name="stockName" value="MSCI World" />
+                      <button type="submit" style="background: none; border: none; color: inherit; cursor: pointer;"> > check MSCI World</button>
+                    </form>
+                  </li>
+                  <li>
+                    <form action="/get-stock" method="POST" style="display: inline;">
+                      <input type="hidden" name="stockName" value="Gold" />
+                      <button type="submit" style="background: none; border: none; color: inherit; cursor: pointer;"> > check Gold</button>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#"
+              ><span>About</span>
+              <i class="bi bi-chevron-down toggle-btn-dropdown"></i
+            ></a>
+            <ul>
+              <li><a href="#">just for demo purposes</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#"
+              ><span>Team</span>
+              <i class="bi bi-chevron-down toggle-btn-dropdown"></i
+            ></a>
+            <ul>
+              <li><a href="#">just for demo purposes</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+

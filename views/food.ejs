@@ -1,0 +1,19 @@
+<%- include("header.ejs") %>
+
+<!-- bei caro muss die background-color: transparent -->
+<section class="caro section dark-bg">     
+    <div class="container margin-top-100-z-index-1">
+        <h1><%= title %></h1>
+        <img src="<%= image %>" alt="<%= title %>" style="max-width: 100%; height: auto;" />
+        <h4 class="margin-top-50-z-index-1">Ingredients</h4>
+        <ul>
+          <% ingredients.forEach((ingredient) => { %>
+            <li><%= ingredient %></li>
+          <% }); %>
+        </ul>
+        <h4 class="margin-top-50-z-index-1">Instructions</h4>
+        <p><%- instructions %></p>
+      </div>
+</section>
+
+<%- include("footer.ejs") %>

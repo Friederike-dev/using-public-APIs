@@ -1,0 +1,22 @@
+https://spoonacular.com/food-api/console#Dashboard
+
+Email: f13149@hotmail.com
+U9im7sTV_3%oPk
+
+API Key: d7f50ee097194824aa2be38df33e2cec
+
+
+alphavantage:
+nur 20 kostenlose Anfragen pro Monat!?!
+https://www.alphavantage.co/support/#api-key
+https://www.alphavantage.co/documentation/
+Email: f13149@hotmail.com
+apiKey: 13HWZR50AJI6U2DU
+
+
+YAHOO:
+https://rapidapi.com/auth/sign-up
+Username: Friederike
+Email: f.hemsen@outlook.com
+U9im7sTV_3%oPk
+apiKey: 0e83d80564mshfc61d3f7fbbb27dp126bd6jsnbab2feab740a

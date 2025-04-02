@@ -1,0 +1,96 @@
+<%- include("header.ejs") %>
+<section id="stock" class="caro section dark-bg">
+  <div class="container margin-top-50-z-index-1">
+
+    <!-- first row -->
+    <div class="row gy-4">
+      <div class="col-12 d-flex justify-content-center">
+        <h1>Stock Market</h1>
+      </div>
+    </div> <!--  end 1. of row -->
+
+    <!-- second row -->
+    <div class="row gy-4">
+
+        <div class="col-12 d-flex justify-content-center">
+            <% if (typeof symbol == 'undefined') { %>
+                <div class="first-cell">
+                  <p>Enter a name or symbol of a stock to view its current price.</p>
+                  <form action="/get-stock" method="post" class="city-input-form">
+                    <input
+                      id="stockInput"
+                      type="text"
+                      name="stockName"
+                      value=""
+                      placeholder="Enter stock name or symbol"
+                      required
+                    />
+                    <button type="submit" class="btn">Search</button>
+                  </form>
+                </div>
+                <% } %>
+        </div>
+    </div> <!--  end 2. of row -->
+        
+        <!-- third row with 2 cells -->
+        <div class="row gy-4">
+
+      <!-- first cell -->
+      <div id="first-cell" class="col-lg-6 col-md-12 d-flex flex-column align-items-center text-center">
+         
+        
+        <% if (typeof symbol !== 'undefined') { %>
+        <div id="stockResult" class="service-item d-flex justify-content-center flex-column align-items-center" data-aos="fade-up" data-aos-delay="100" >
+          
+          <h3><%= stockName %></h3>
+          <p></p>
+          <p>Symbol : <%= symbol %></p>
+          <p>Price : <%= price %></p>
+          <p>Change : <%= change %> (compared to the previous day's close)</p>
+          <p>
+            Change Percent : <%= changePercent %> (compared to the previous day's
+            close)
+          </p>
+          <% } %> 
+          
+          <% if (error) { %>
+          <p class="error-message"><%= error %></p>
+          <% } %>
+        </div>
+      </div> <!--  end of first cell -->
+
+      <!-- second cell -->
+      <% if (Array.isArray(historicalData) && historicalData.length > 0) { %>
+        <div id="second-cell" class="col-lg-6 col-md-12 d-flex flex-column align-items-center text-center">
+            <div id="graph" class="service-item d-flex justify-content-center flex-column align-items-center" data-aos="fade-up" data-aos-delay="100">
+                <h3>price history for 1 year</h3>
+                <script>
+                  // the error in VS Code can be ignored, it is a known issue with EJS and VS Code
+                  const historicalData = <%- JSON.stringify(historicalData || []) %>;
+                </script>
+                <canvas id="priceChart" width="400" height="300"></canvas>
+            </div>
+          
+        </div>
+      <% } else if (typeof symbol !== 'undefined') { %>
+        <div id="second-cell" class="col-lg-6 col-md-12 d-flex flex-column align-items-center text-center">
+          <h3>Price History</h3>
+          <p>No historical data available for this stock.</p>
+        </div>
+      <% } %>
+    </div>
+    <!--  end of second cell and end of row -->
+
+    <!-- third row with one cell   -->
+    <div class="row gy-4">
+      <% if (typeof symbol !== 'undefined') { %>
+      <div class="col-12 d-flex justify-content-center">
+        <a href="/stock" class="btn-carousel">Back</a>
+      </div>
+      <% } %>
+    </div> <!--  End of row -->
+
+  </div>
+</section>
+
+<%- include("footer.ejs") %>

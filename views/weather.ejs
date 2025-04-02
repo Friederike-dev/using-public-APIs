@@ -1,0 +1,67 @@
+<%- include("header.ejs") %>
+<section class="caro section dark-bg">
+  <div class="container position-relative margin-top-50-z-index-1">
+
+    <!-- Erste Zeile mit einem Bereich -->
+    <div class="row gy-4">
+        <div class="col-12 d-flex justify-content-center">
+          <h1>Weather Forecast</h1>
+        </div>
+      </div>
+
+    <!-- Zweite Zeile mit zwei Bereichen -->
+    <div class="row gy-4">
+      <!-- Erster Bereich -->
+      <div class="col-lg-6 col-md-12 d-flex flex-column align-items-center text-center">
+        <% if (typeof description == 'undefined') { %>
+        <div class="first-cell">
+          <p>
+            Enter a location (city name) to see the weather forecast and additional
+            information.
+          </p>
+          <form action="/get-weather" method="post"  class="city-input-form">
+            <!-- <label for="cityInput">City Name: </label> -->
+            <input id="cityInput" type="text" name="cityName" value="" placeholder="Enter a location"/>
+            <button type="submit" class="btn">Go</button>
+          </form>
+        </div>
+        <% } %>
+
+        <div id="weatherResult" class="d-flex justify-content-center flex-column align-items-center">
+          <% if (typeof description !== 'undefined') { %>
+
+          <img src="<%= iconURL %>" alt="Weather Icon" />
+          <p>The temperature in <%= city %> is <%= temp %>&deg;C.</p>
+          <p>weather description: <%= description %></p>
+          
+
+          <% } %>
+        </div>
+      </div>
+
+      <!-- Zweiter Bereich -->
+<div id="second-cell" class="col-lg-6 col-md-12 d-flex flex-column align-items-center text-center">
+
+    
+    <div id="map" 
+  data-lat="<%= typeof lat !== 'undefined' ? lat : 53.5511 %>" 
+  data-lon="<%= typeof lon !== 'undefined' ? lon : 9.9937 %>" 
+  data-city="<%= typeof city !== 'undefined' ? city : 'Hamburg' %>">
+</div>
+  </div>
+
+    
+    </div> <!--  End of row -->
+
+<!-- Dritte Zeile mit einem Bereich   -->
+<div class="row gy-4">
+    <% if (typeof description !== 'undefined') { %>
+    <div class="col-12 d-flex justify-content-center ">
+      <a href="/weather" class="btn-carousel">Back</a>
+    </div>
+    <% } %>
+
+  </div>
+</section>
+
+<%- include("footer.ejs") %>

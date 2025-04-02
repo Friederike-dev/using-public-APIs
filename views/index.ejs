@@ -1,0 +1,256 @@
+<%- include("header.ejs") %>
+
+      <!-- caro Section -->
+      <section id="caro" class="caro justify-content-center section dark-bg">
+        <div
+          id="caro-carousel"
+          class="carousel carousel-fade"
+          data-bs-ride="carousel"
+          data-bs-interval="3500"
+        >
+          <div class="container">
+
+            <!-- Carousel Item 1 -->
+            <div class="carousel-item active">
+              <div class="carousel-container">
+                <h2>It's time to take a break!</h2>
+                <p>
+                  Maybe have a coffee or a tea and check out how the weather is
+                  going to be or the performance at the stock market or read
+                  something interesting on wikipedia
+                </p>
+              </div>
+            </div>
+            <!-- End Carousel Item 1 -->
+
+            <!-- Carousel Item 2 -->
+            <div class="carousel-item">
+              <div class="carousel-container">
+                <h2>Weather Forecast</h2>
+                <p>
+                  Enter a location to see the weather forecast and additional
+                  information.
+                </p>
+                <a href="/weather" class="btn-carousel">Weather Forecast</a>
+              </div>
+            </div>
+            <!-- End Carousel Item 2 -->
+
+            <!-- Carousel Item 3 -->
+            <div class="carousel-item">
+              <div class="carousel-container">
+                <h2>Stock Market</h2>
+                <p>
+                  Click below to find out more about the current performance at
+                  the stock market.
+                </p>
+                <a href="/stock" class="btn-carousel">Read More</a>
+              </div>
+            </div>
+            <!-- End Carousel Item 3 -->
+
+            <!-- Carousel Item 4 -->
+            <div class="carousel-item">
+              <div class="carousel-container">
+                <h2>Find a new recipe</h2>
+                <p>Click below to see a random meal suggestion:</p>
+                <a href="/food" class="btn-carousel">Recipe</a>
+              </div>
+            </div>
+            <!-- End Carousel Item 4 -->
+
+            <!-- Carousel Item 5 -->
+            <div class="carousel-item">
+              <div class="carousel-container">
+                <h2>Read a random article</h2>
+                <p>Click below to see a random article suggestion from Wikipedia</p>
+                <a href="/wikipedia" class="btn-carousel">Article</a>
+              </div>
+            </div>
+            <!-- End Carousel Item 5 -->
+
+           
+            <ol class="carousel-indicators"></ol>
+          </div>
+
+          <a
+          class="carousel-control-prev"
+          href="#caro-carousel"
+          role="button"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon bi bi-chevron-left"
+            aria-hidden="true"
+          ></span>
+        </a>
+
+        <a
+          class="carousel-control-next"
+          href="#caro-carousel"
+          role="button"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon bi bi-chevron-right"
+            aria-hidden="true"
+          ></span>
+        </a>
+
+
+
+        </div>
+      </section>
+      <!-- /caro Section -->
+
+      <!-- Services Section -->
+      <section class="section">
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-item position-relative yellow">
+                <div class="icon">
+                  <i class="bi bi-brightness-high"></i>
+                </div>
+                <a href="/weather" class="stretched-link">
+                  <h3>Weather Forecast</h3>
+                </a>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-item position-relative green">
+                <div class="icon">
+                  <i class="bi bi-cup"></i>
+                </div>
+                <a href="/food" class="stretched-link">
+                  <h3>Recipe</h3>
+                </a>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-item position-relative orange">
+                <div class="icon">
+                  <i class="bi bi-wikipedia"></i>
+                </div>
+                <a href="/wikipedia" class="stretched-link">
+                  <h3>Wikipedia</h3>
+                </a>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="service-item position-relative blue">
+                <div class="icon">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <a href="/stock" class="stretched-link">
+                  <h3>Stock Market</h3>
+                </a>
+              </div>
+            </div>
+            <!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section light-bg">
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-6 position-relative align-self-start"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="/img/coffee-1117933_1920s.jpg"
+                class="img-fluid"
+                alt=""
+              />
+
+              <a
+                href="/img/51212-463624236_tiny.mp4"
+                class="glightbox animated-play-btn"
+              ></a>
+            </div>
+            <div
+              class="col-lg-6 content"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <h3>
+                Our Mission is to provide you with informational and
+                entertaining data for your break time.
+              </h3>
+              <p>
+                Click on the Video to have your coffee.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-check2-all"></i>
+                  <span
+                    >Hintergrundbild von
+                    <a
+                      href="https://pixabay.com/de/users/publicdomainpictures-14/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=276010"
+                      >PublicDomainPictures</a
+                    >
+                    auf
+                    <a
+                      href="https://pixabay.com/de//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=276010"
+                      >Pixabay</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check2-all"></i>
+                  <span
+                    >Kaffeebild von
+                    <a
+                      href="https://pixabay.com/de/users/acekreations-1659208/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1117933"
+                      >Craig Melville</a
+                    >
+                    auf
+                    <a
+                      href="https://pixabay.com/de//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1117933"
+                      >Pixabay</a
+                    ></span
+                  >
+                </li>
+                  <li>
+                    <i class="bi bi-check2-all"></i>
+                  <span>Video von <a href="https://pixabay.com/de/users/omnix-11813729/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=51212">Omnix</a> / <a href="https://pixabay.com/de//?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=51212">Pixabay</a>
+                  </span>
+
+                  
+                </li>
+              </ul>
+              <p>Please contact us for more information about our work.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+    
+<%- include("footer.ejs") %>
