@@ -236,6 +236,15 @@ section,
 }
 
 /*------------ Navigation - Mobile ----------------*/
+/* @media (max-width: 611px) {
+
+  .mobile-nav-active .navigation {
+    width: 13%;
+  }
+} */
+
+
+
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
@@ -358,7 +367,7 @@ section,
     background: rgba(32, 38, 41, 0.3);
     transition: 0.3s;
     height: 380px;
-    width: 13%; /* changed from before 60 */
+    width: 60%;
   }
 
   .align-items-center {
@@ -378,6 +387,9 @@ header .align-items-center {
 @media (max-width: 611px) {
   .mobile-nav-active .navigation {
     position: unset !important;
+    width: 13%;
+    line-height: 1;
+    background: unset;
   }
 
   header h1 {
